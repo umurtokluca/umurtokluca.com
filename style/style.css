@@ -14,7 +14,7 @@ a {text-decoration: none;color: #fff;}
 
 @keyframes ani1 {0% {opacity: 0;transform: translateY(-80%);} to {opacity: 1;transform: none}}
 @keyframes ani2 {0% {opacity: 0;transform: translateY(80%);} to {opacity: 1;transform: none}}
-
+@keyframes spin {100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }}
 .top {height: 100vh;width: 100%;background: url(../img/bg-top.jpg) center / cover no-repeat;}
 .top-headings {position: absolute;color: #fff;text-align: center;left: 0;right: 0;top: 40%;}
 .top-headings > h1, .top-headings > h2 {opacity: 0;animation-duration: .5s;animation-delay: .1s;animation-timing-function: ease;animation-fill-mode: forwards;}
@@ -31,6 +31,11 @@ a {text-decoration: none;color: #fff;}
 .languages > div:last-of-type {margin-right: 0;}
 .languages > div > h3 {margin-right: auto;font-weight: 400;}
 .languages > div > img {margin-top: 50px;}
+
+.contact {display: flex;justify-content: space-between;background: rgb(28,31,38); background: linear-gradient(45deg, rgba(28,31,38,1) 0%, rgba(0,0,0,1) 20%, rgba(0,99,184,1) 100%);padding: 30px 100px;margin: 150px 0 125px;}
+.contact > div:first-of-type {font-size: 40px;font-weight: 500;}
+.contact > div:last-of-type {}
+.contact > div:last-of-type > img {animation:spin 4s linear infinite;}
 
 .slider-container {overflow: hidden;position: relative;padding-bottom: 100px;padding-right: 40px;}
 .slider {display: flex;height: 410px;transition: transform .5s ease-in-out;flex-wrap: wrap;}
@@ -87,8 +92,12 @@ footer {background-color: #0E0E0E;}
     .languages > div {width: 50%;margin-right: 0;}
     .languages > div > h3 {font-size: 16px;}
 
+    .contact {padding: 20px 10px;flex-direction: column;align-items: center;margin: 100px 0 50px;}
+    .contact > div:first-of-type {font-size: 24px;}
+    .contact > div {margin: 10px 0;}
+
     .slider-container {padding-right: 0;padding-bottom: 50px;}
-    .slider-title {font-size: 34px;margin-bottom: 20px;}
+    .slider-title {font-size: 34px;}
     .slider {height: 370px;}
     .slider-item {flex-direction: column-reverse;}
     .slider-item-info, .slider-item-img {width: 100%;padding: 0;}
